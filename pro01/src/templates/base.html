@@ -7,8 +7,13 @@
     </head>
         <body>
         <h1>Esta es una plantilla base django</h1>
+        {% extends 'base.html' %}
         {% block content %}
-            Reemplazame
+        <h2>Hola Mundo desde Django (tag extends)</h2>
+        <h3>Con templates</h3>
+        {{ request.user }}
+        <br>
+        {{request.user.is_authenticated}}
         {% endblock %}    
     </body>
     </html>
