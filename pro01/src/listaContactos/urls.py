@@ -17,14 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
+from inicio.views import anotherViewThree
+from inicio.views import anotherViewFour
 
 #tarea
 from inicio.views import anotherViewTwo
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', myHomeView, name="Pagina de inicio"),
     path('another/', anotherView),
+    #nuevas  Vistas creadas
     path('anotherTwo/',anotherViewTwo),
+    path('anotherThree/',anotherViewThree),
+    path('anotherFour/',anotherViewFour),
+
+    
 ]

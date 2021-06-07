@@ -12,6 +12,16 @@ def myHomeView(request,*args,**kwargs):
     return render(request,"home.html",{})
 def anotherView(request):
     return HttpResponse('<h1>Solo otra pagina</h1>')
-
+#nuevas vistas
 def anotherViewTwo(request):
     return HttpResponse('<h1>NUEVA VISTA 2</h1>')
+
+def anotherViewThree(request,*args,**kwargs):
+    print(args, kwargs)
+    print(request.user)
+    return render(request,"base.html",{})
+
+def anotherViewFour(request,*args,**kwargs):
+    print(args, kwargs)
+    print(request.user)
+    return render(request,"base2.html",{})
