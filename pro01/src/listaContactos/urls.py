@@ -27,10 +27,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', myHomeView, name="Pagina de inicio"),
     path('another/', anotherView),
-    #nuevas  Vistas creadas
+    #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
     path('anotherThree/',anotherViewThree),
     path('anotherFour/',anotherViewFour),
+##WARNING GIT
+##VISTAS EN CLASES
 
     
 ]

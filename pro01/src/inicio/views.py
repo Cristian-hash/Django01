@@ -25,3 +25,4 @@ def anotherViewFour(request,*args,**kwargs):
     print(args, kwargs)
     print(request.user)
     return render(request,"base2.html",{})
+#
