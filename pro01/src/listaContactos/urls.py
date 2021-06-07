@@ -27,4 +27,8 @@ urlpatterns = [
     path('', myHomeView, name="Pagina de inicio"),
     path('another/', anotherView),
     path('anotherTwo/',anotherViewTwo),
+
+
+#comentario1
+
 ]
