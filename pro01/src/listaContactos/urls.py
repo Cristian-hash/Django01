@@ -24,14 +24,14 @@ from personas.views import personaTestView
 from inicio.views import anotherViewThree
 from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
-
+from personas.views import personaTestView,personaCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', myHomeView, name="home"),
     path('another/', anotherView,name="otro"),
     path('persona/', personaTestView, name="otro"),
-    
+    path('agregar/',personaCreateView, name="createPersona"),
     
 
     
