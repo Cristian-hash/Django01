@@ -24,9 +24,10 @@ from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', myHomeView, name="Pagina de inicio"),
     path('another/', anotherView),
+    path('admin/', admin.site.urls),
+    
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
     path('anotherThree/',anotherViewThree),
@@ -34,5 +35,4 @@ urlpatterns = [
 ##WARNING GIT
 ##VISTAS EN CLASES
 
-    
 ]

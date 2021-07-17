@@ -8,8 +8,6 @@
         <body>
         <h1>Esto es de base.html</h1>
         <h2>TITULAR DESDE BASE HTML</h2>
-
-
         {% block content %}
         <h2>Hola Mundo desde Django (tag extends)</h2>
         <h3>Con templates</h3>
@@ -17,8 +15,6 @@
         <br>
         {{request.user.is_authenticated}}
         {% endblock %}    
-    
-        
         <h1>PIE DE PAGINA DESDE BASE.html</h1>
     </body>
     </html>
