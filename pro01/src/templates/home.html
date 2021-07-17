@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <title>
-            Documento html
-        </title>
+        <title>Template base</title>
+
     </head>
-    <h1>Hola mundo desde html y django</h1>
-    <h2>Con templates</h2>
+    <body>
+        {% extends 'base.html' %}
+        {%block content%}
+        <h1>Hola Mundo desde Django</h1>
+        <h2>Con templates</h2>
+        <p>
+            {{myText}}
+            {{myNumber}}        
+        </p>
 
-    {Usuario: {{request.user}} }
-    <br>
-
-<!--    06-09 el tag for-->
-
-<ul>
-    {%for myItem in List%}
-    <li>{{myItem}}</li>
-    {% endfor %}
-</ul>
-<!--    06-09-->
-<!--    06-09 el tag for ,copnteo diapo 6-->
-
-
-
-<!--    06-09-->
-
-
-    <br>
-    Esta autenticado? {{request.user.is_authenticated}}
+        {{ request.user }} 
+        <br>
+        {{ request.user.is_authenticated }}
+        {% endblock %}
+    </body>
 </html>
 
     
