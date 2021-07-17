@@ -17,16 +17,23 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
-from inicio.views import anotherViewThree
-from inicio.views import anotherViewFour
+from personas.views import personaTestView
+
 
 #tarea
+from inicio.views import anotherViewThree
+from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
 
+
 urlpatterns = [
-    path('', myHomeView, name="Pagina de inicio"),
-    path('another/', anotherView),
     path('admin/', admin.site.urls),
+    path('', myHomeView, name="home"),
+    path('another/', anotherView,name="otro"),
+    path('persona/', personaTestView, name="otro"),
+    
+    
+
     
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
