@@ -14,10 +14,11 @@
             {{myText}}
             {{myNumber}}        
         </p>
-
-        {{ request.user }} 
-        <br>
-        {{ request.user.is_authenticated }}
+        <ul>
+            {%for myItem in myList %}
+            <li>{{myItem}}</li>
+            {%endfor%}
+        </ul>
         {% endblock %}
     </body>
 </html>
