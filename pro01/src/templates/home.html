@@ -11,14 +11,16 @@
         <h1>Hola Mundo desde Django</h1>
         <h2>Con templates</h2>
         <p>
-            {{myText}}
+            {{myText|upper|truncatechars:'16'}},
             {{myNumber}}        
         </p>
         <ul>
             {%for myItem in myList %}
-            <li>{{forloop.counter}}-{{myItem}}
+            <li>{{forloop.counter}}-{{myItem|add:2}}
             {% if myItem == 33 %}
-                -Este numero es magico 
+                -Este numero es magico
+            {% elif myItem|divisibleby:2 %}
+                -Este numero Par 
             {% elif myItem > 50%}
             -Este numero es mayor que 50
             {% endif %}
