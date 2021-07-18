@@ -28,14 +28,14 @@ from personas.views import personaTestView,personaCreateView,searchForHelp
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', myHomeView, name="home"),
-    path('another/', anotherView,name="otro"),
+    path('', myHomeView, name="PaginaInicio"),
+    path('add/',personaCreateView, name="AgregarPersonas"),
     path('persona/', personaTestView, name="otro"),
     path('agregar/',personaCreateView, name="createPersona"),
     path('search/',searchForHelp, name="buscar"),
+    path('another/', anotherView,name="otro"),
+    path('admin/', admin.site.urls),
     
-
     
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
