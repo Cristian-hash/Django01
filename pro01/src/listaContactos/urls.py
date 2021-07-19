@@ -24,7 +24,7 @@ from inicio.views import anotherView
 from inicio.views import anotherViewThree
 from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
-from personas.views import personaTestView,personaCreateView,searchForHelp
+from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView
 
 
 urlpatterns = [
@@ -33,9 +33,9 @@ urlpatterns = [
     path('persona/', personaTestView, name="otro"),
     path('agregar/',personaCreateView, name="createPersona"),
     path('search/',searchForHelp, name="buscar"),
+    path('anotherAdd/', personasAnotherCreateView, name="otroAgregarPersonas"),
     path('another/', anotherView,name="otro"),
     path('admin/', admin.site.urls),
-    
     
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
