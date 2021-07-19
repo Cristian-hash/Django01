@@ -33,8 +33,8 @@ urlpatterns = [
     path('persona/', personaTestView, name="otro"),
     path('agregar/',personaCreateView, name="createPersona"),
     path('search/',searchForHelp, name="buscar"),
-    path('anotherAdd/', personasAnotherCreateView, name="otroAgregarPersonas"),
-    path('another/', anotherView,name="otro"),
+    path('anotherAdd/', personasAnotherCreateView, name="OtroAgregarPersonas"),
+    path('another/', anotherView,name="otra"),
     path('admin/', admin.site.urls),
     
     #nuevas  Vistas creadas BASADAS EN FUNCIONES

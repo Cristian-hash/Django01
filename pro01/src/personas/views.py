@@ -9,16 +9,18 @@ def personaTestView(request):
     }
     return render(request,'personas/descripcion.html',context)
 def personaCreateView(request):
-    print('GET: ', request.GET)
-    print('POST: ', request.POST)
-    context = {}
+    print(request)
+    if request.method=='POST':
+        nombre=request.POST.get('q')
+        print(nombre)
+    context={}
     return render(request,'personas/personasCreate.html',context)
 
 def searchForHelp(request):
     return render(request,'personas/search.html',{})
 
 def personasAnotherCreateView(request):
-    form = RawPersonaForm( )
+    form = RawPersonaForm( request.POST )
     context = {
         'form':form,
     }
