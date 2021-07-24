@@ -17,9 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
-
-
-
 #tarea
 from inicio.views import anotherViewThree
 from inicio.views import anotherViewFour
