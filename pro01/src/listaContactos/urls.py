@@ -13,15 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from inicio.views import myHomeView
-from inicio.views import anotherView
 #tarea
 from inicio.views import anotherViewThree
 from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
-from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView
+#proyecto Principal
+from django.contrib import admin
+from django.urls import path
+from inicio.views import myHomeView
+from inicio.views import anotherView
+
+
+from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView,personasShowObject
 
 
 urlpatterns = [
@@ -33,6 +36,7 @@ urlpatterns = [
     path('anotherAdd/', personasAnotherCreateView, name="OtroAgregarPersonas"),
     path('another/', anotherView,name="otra"),
     path('admin/', admin.site.urls),
+    path('personas/<int:myID>',personasShowObject,name="browsing"),
     
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
