@@ -24,7 +24,7 @@ from inicio.views import myHomeView
 from inicio.views import anotherView
 
 
-from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView,personasShowObject,personasDeleteView
+from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView,personasShowObject,personasDeleteView,personasListView
 
 
 urlpatterns = [
@@ -38,7 +38,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('personas/<int:myID>',personasShowObject,name="browsing"),
     path('personas/<int:myID>/delete/', personasDeleteView,name='deleting'),
-
+    path('personas/',personasListView,name='listing'),
 
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
     path('anotherTwo/',anotherViewTwo),
