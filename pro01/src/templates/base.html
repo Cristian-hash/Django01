@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Codigo para Estudiantes desde Django</title>
+      <title>
+        {% block title %}
+        {% endblock %}
+      </title>
     </head>
-        {% include 'nav.html'%}
-        <h1>Este es un texto desde Base</h1>
-        {% block content%}
-            Reemplazame
-        {%endblock%}
+
+    <body>
+        {%block body%}
+        {% endblock %}
     </body>
 </html>

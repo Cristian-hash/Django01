@@ -1,6 +1,9 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from .models import Persona
 from .forms import PersonaForm,RawPersonaForm
+from django.views.generic.list import(
+    ListView,
+)
 
 # Create your views here.
 def personaTestView(request):
@@ -73,3 +76,8 @@ def personasListView(request):
         'objectList':queryset,
     }
     return render(request,'personas/personasLista.html',context)
+
+# Create your views here.
+class PersonaListView(ListView):
+    model = Persona
+

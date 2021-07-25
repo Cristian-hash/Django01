@@ -44,7 +44,6 @@ urlpatterns = [
 
 
 """
-
     path('', myHomeView, name="PaginaInicio"),
     path('add/',personaCreateView, name="AgregarPersonas"),
     path('persona/', personaTestView, name="otro"),
