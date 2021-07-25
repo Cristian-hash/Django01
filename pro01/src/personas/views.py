@@ -9,16 +9,16 @@ def personaTestView(request):
     }
     return render(request,'personas/descripcion.html',context)
 def personaCreateView(request):
-    print(request)
-    form=PersonaForm(request.POST or None)
+    obj=Persona.objects.get(id=3)
+    form=PersonaForm(request.POST or None,instance=obj)
     if form.is_valid():
         form.save()
         form =PersonaForm()
     context={
-        'form':form,
+        'form': form,
     }
-    return render(request,'personasCreate.html',context)
-"""print(request)
+    return render(request,'personas/personasCreate.html',context)
+"""    print(request)
     if request.method=='POST':
         nombre=request.POST.get('q')
         print(nombre)
