@@ -13,21 +13,38 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+"""
 #tarea
+
 from inicio.views import anotherViewThree
 from inicio.views import anotherViewFour
 from inicio.views import anotherViewTwo
+"""
 #proyecto Principal
 from django.contrib import admin
-from django.urls import path
-from inicio.views import myHomeView
-from inicio.views import anotherView
-
-
-from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView,personasShowObject,personasDeleteView,personasListView
+from django.urls import path, include
+from inicio.views import myHomeView,anotherView
 
 
 urlpatterns = [
+    path('personas/',include('personas.urls')),
+    path('',myHomeView,name='PaginaInicio'),
+    path('another',anotherView,name='otra'),
+    path('admin',admin.site.urls),
+]
+"""
+    #nuevas  Vistas creadas BASADAS EN FUNCIONES
+    path('anotherTwo/',anotherViewTwo),
+    path('anotherThree/',anotherViewThree),
+    path('anotherFour/',anotherViewFour),
+"""
+##WARNING GIT
+##VISTAS EN CLASES
+"""from personas.views import personaTestView,personaCreateView,searchForHelp,personasAnotherCreateView,personasShowObject,personasDeleteView,personasListView"""
+
+
+"""
+
     path('', myHomeView, name="PaginaInicio"),
     path('add/',personaCreateView, name="AgregarPersonas"),
     path('persona/', personaTestView, name="otro"),
@@ -39,11 +56,4 @@ urlpatterns = [
     path('personas/<int:myID>',personasShowObject,name="browsing"),
     path('personas/<int:myID>/delete/', personasDeleteView,name='deleting'),
     path('personas/',personasListView,name='listing'),
-
-    #nuevas  Vistas creadas BASADAS EN FUNCIONES
-    path('anotherTwo/',anotherViewTwo),
-    path('anotherThree/',anotherViewThree),
-    path('anotherFour/',anotherViewFour),
-##WARNING GIT
-##VISTAS EN CLASES
-]
+"""
