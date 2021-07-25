@@ -37,7 +37,7 @@ urlpatterns = [
     path('another/', anotherView,name="otra"),
     path('admin/', admin.site.urls),
     path('personas/<int:myID>',personasShowObject,name="browsing"),
-    path('personas/<int>myID>/delete/', personasDeleteView,name='deleting'),
+    path('personas/<int:myID>/delete/', personasDeleteView,name='deleting'),
 
 
     #nuevas  Vistas creadas BASADAS EN FUNCIONES
@@ -46,5 +46,4 @@ urlpatterns = [
     path('anotherFour/',anotherViewFour),
 ##WARNING GIT
 ##VISTAS EN CLASES
-
 ]
