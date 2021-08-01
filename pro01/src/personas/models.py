@@ -10,3 +10,7 @@ class Persona(models.Model):
 
     def get_absolute_url(self):
         return reverse('personas:browsing', kwargs={'myID':self.id})
+
+###
+
+###

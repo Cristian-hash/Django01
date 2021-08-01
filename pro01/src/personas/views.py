@@ -17,7 +17,6 @@ def personaCreateView(request):
         'nombres':'Sin Nombre'
     }    
 
-
     form=PersonaForm(request.POST or None,initial= initialValues)
     if form.is_valid():
         form.save()
@@ -50,7 +49,6 @@ def personasAnotherCreateView(request):
     }
     return render(request,'personas/personasCreate.html',context)
 
-
 def personasShowObject(request, myID):
     obj = Persona.objects.get(id=myID)
     context ={
@@ -78,6 +76,7 @@ def personasListView(request):
     return render(request,'personas/personasLista.html',context)
 
 # Create your views here.
-class PersonaListView(ListView):
-    model = Persona
 
+class PersonaListView(ListView):
+    model =Persona
+    queryset = Persona.objects.filter(edad__lte='10')    
