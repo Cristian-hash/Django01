@@ -112,4 +112,4 @@ class PersonaDeleteView(DeleteView):
 class PersonaQueryView(View):
 	def get(self,request,*args,**kwargs):
 		queryset =Persona.objects.filter(edad__lte='40')
-		
+		return JsonResponse(list(queryset.values()),safe=False)
