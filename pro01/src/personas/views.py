@@ -105,12 +105,11 @@ class PersonaUpdateView(UpdateView):
         'donador'
     ]
 
-
-
-
-
-
 class PersonaDeleteView(DeleteView):
 	model=Persona
 	success_url=reverse_lazy('personas:persona-list')
 
+class PersonaQueryView(View):
+	def get(self,request,*args,**kwargs):
+		queryset =Persona.objects.filter(edad__lte='40')
+		return JsonResponse(list(queryset.values()),safe=False)
